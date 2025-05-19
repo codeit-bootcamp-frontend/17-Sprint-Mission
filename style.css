@@ -177,3 +177,52 @@ body {
   font-size: 20px;
   font-weight: 400;
 }
+
+.register-section {
+  padding: 138px 466px;
+  background-color: #ffffff;
+}
+
+.register-section .content {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  border-radius: 12px;
+  background-color: #fcfcfc;
+}
+
+.register-section .content img {
+  width: 579px;
+  height: 444px;
+}
+
+.register-section .content .description {
+  display: flex;
+  flex-direction: column;
+  padding-right: 24px;
+  gap: 12px;
+}
+
+.register-section .content .description span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3692ff;
+}
+
+.register-section .content .description .description-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.register-section .content .description h2 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.register-section .content .description p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
