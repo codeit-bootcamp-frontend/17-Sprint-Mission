@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.header {
+  padding: 9px 400px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1120px;
+}
+
+.navbar .title img {
+  width: 153px;
+  height: 51px;
+}
+
+.login {
+  width: 128px;
+  height: 48px;
+  padding: 12px 23px;
+  text-align: center;
+  background-color: #3692ff;
+  border-radius: 8px;
+}
+
+.login a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
