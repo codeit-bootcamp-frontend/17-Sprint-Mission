@@ -6,6 +6,10 @@ body {
   margin: 0 auto;
 }
 
+main {
+  margin-top: -9px;
+}
+
 .header {
   padding: 9px 400px;
 }
@@ -15,6 +19,13 @@ body {
   justify-content: space-between;
   align-items: center;
   max-width: 1120px;
+}
+
+.navbar .title {
+  display: flex;
+  align-items: center;
+  width: 153px;
+  height: 51px;
 }
 
 .navbar .title img {
@@ -254,4 +265,44 @@ body {
 .footer-section .content img {
   width: 746px;
   height: 397px;
+}
+
+.footer {
+  height: 160px;
+  display: flex;
+  gap: 10px;
+  padding: 32px 400px;
+  background-color: #111827;
+}
+
+.footer .content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  width: 100%;
+}
+
+.footer .content .description {
+  color: #9ca3af;
+}
+
+.footer .content .qna {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer .content .qna a {
+  text-decoration: none;
+  color: #e5e7eb;
+}
+
+.footer .content .sns {
+  display: flex;
+  gap: 12px;
+}
+
+.footer .content .sns img {
+  width: 20px;
+  height: 20px;
 }
