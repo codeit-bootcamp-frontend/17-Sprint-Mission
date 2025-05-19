@@ -124,6 +124,56 @@ body {
 
 .hotitem-section .content .description p {
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.search-section {
+  padding: 138px 466px;
+  background-color: #ffffff;
+}
+
+.search-section .content {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  border-radius: 12px;
+  background-color: #fcfcfc;
+  text-align: right;
+}
+
+.search-section .content img {
+  width: 579px;
+  height: 444px;
+}
+
+.search-section .content .description {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  gap: 12px;
+}
+
+.search-section .content .description span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3692ff;
+}
+
+.search-section .content .description .description-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-section .content .description h2 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.search-section .content .description p {
+  margin: 0;
+  font-size: 20px;
   font-weight: 400;
 }
