@@ -78,3 +78,52 @@ body {
   width: 746px;
   height: 340px;
 }
+
+.hotitem-section {
+  padding: 138px 466px;
+  background-color: #ffffff;
+}
+
+.hotitem-section .content {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  border-radius: 12px;
+  background-color: #fcfcfc;
+}
+
+.hotitem-section .content img {
+  width: 579px;
+  height: 444px;
+}
+
+.hotitem-section .content .description {
+  display: flex;
+  flex-direction: column;
+  padding-right: 24px;
+  gap: 12px;
+}
+
+.hotitem-section .content .description span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3692ff;
+}
+
+.hotitem-section .content .description .description-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hotitem-section .content .description h2 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.hotitem-section .content .description p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+}
