@@ -226,3 +226,32 @@ body {
   font-size: 20px;
   font-weight: 400;
 }
+
+.footer-section {
+  background-color: #cfe5ff;
+  height: 540px;
+}
+
+.footer-section .content {
+  display: flex;
+  gap: 69px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 143px;
+}
+
+.footer-section .content .description {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding-bottom: 60px;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer-section .content img {
+  width: 746px;
+  height: 397px;
+}
