@@ -3,10 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 미리보기 -->
+    <meta property="og:url" content="https://pandamarket-jieun.netlify.app/login" />
+    <meta property="og:site_name" content="판다마켓"/>
+    <meta property="og:title" content="판다마켓 - 로그인" />
+    <meta property="og:description" content="일상의 모든 물건을 거래해보세요" />
+    <meta property="og:image" content="https://pandamarket-jieun.netlify.app/image/meta_padamarket.png" />
+    <!-- 트위터 미리보기 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="판다마켓 - 로그인" />
+    <meta name="twitter:description" content="일상의 모든 물건을 거래해보세요" />
+    <meta name="twitter:image" content="https://pandamarket-jieun.netlify.app/image/meta_padamarket.png" />
+    <!-- 링크 -->
     <title>판다마켓</title>
     <link rel="stylesheet" href="css/import.css" />
-    <link rel="icon" href="image/logo.png" />
     <link rel="stylesheet" href="css/auth.css" />
+    <link rel="icon" href="image/logo.png" />
   </head>
   <body>
     <section class="auth_container">
@@ -19,17 +31,17 @@
           <form action="/login">
             <div class="user_input">
               <div class="email_input">
-                <label>이메일</label>
-                <input type="email" class="text_tall"/>
+                <label for="user_email">이메일</label>
+                <input class="text_tall" id="user_email" type="email" placeholder="이메일을 입력해주세요"/>
               </div>
               <div class="password_input">
-                <label>비밀번호</label>
+                <label for="user_password">비밀번호</label>
                 <div class="password_view">
-                  <input type="password" class="text_tall" />
+                  <input class="text_tall" id="user_password" type="password" placeholder="비밀번호를 입력해주세요"/>
                   <span class="material-symbols-outlined password_icon">visibility_off</span>
                 </div>
               </div>
-              <input type="submit" value="로그인" class="auth btn text_tall" />
+              <button type="submit" class="auth btn text_tall" disabled>로그인</button>
             </div>
           </form>
           <div class="simple_login">

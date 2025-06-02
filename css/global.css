@@ -89,28 +89,53 @@ header a.login {
 footer {
   background-color: var(--gray-900);
 }
-footer > div {
+.footer_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 0 3.5rem;
   font-size: 1rem;
 }
-footer p,
-footer .sns {
-  flex-basis: 7.5rem;
-}
+
 footer .faq,
 footer .sns_wrapper {
   display: flex;
   gap: 0.625rem;
-}
-footer .sns_wrapper {
-  justify-content: flex-end;
 }
 
 @media screen and (max-width: 1920px) {
   header {
     padding: 0 12.5rem;
   }
+}
+
+@media screen and (max-width: 1199px) {
+  header{
+    padding: 0 1.5rem;
+  }
+  .footer_container{
+    margin: 0 6.5rem;
+  }
+  footer .company_since{
+    color: var(--gray-100);
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  header{
+    padding: 0 1rem;
+  }
+  
+  .footer_container{
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .company_since{
+    order: 3;
+    width: 100%;
+    padding-top: 3.75rem;
+  }
+
 }

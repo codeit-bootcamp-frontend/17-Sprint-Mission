@@ -7,8 +7,8 @@
 
 .auth_wrapper{
   display: flex;
-  width: 100%;
   height: 100vh;
+  width: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -19,7 +19,8 @@
 }
 
 .user_input label,
-.user_input input {
+.user_input input,
+.auth.btn {
   display: block;
   width: 100%;
 }
@@ -30,7 +31,7 @@
   margin-bottom: 1rem;
 }
 
-.user_input input{
+.user_input input, .auth.btn{
   margin-bottom: 1.5rem;
 }
 
@@ -43,19 +44,19 @@
 }
 .logo_img{
   max-width: 6.5rem;
-  width: 100%;
 }
 
-.user_input input:not(.btn){
+.user_input input{
   background-color: var(--gray-100);
   border-radius: 0.75rem;
   padding: 0 1.5rem;
 }
 
 .auth.btn{
-  cursor: pointer;
   font-size: 1.25rem;
   font-weight: 600;
+  background-color: var(--gray-400);
+  cursor: unset;
 }
 
 .password_view{
@@ -65,6 +66,7 @@
   position: absolute;
   right: 1.5rem; top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 
@@ -106,4 +108,27 @@
 }
 .auth_link{
   margin-left: 0.3rem;
+}
+
+@media screen and (max-width: 767px) {
+  
+  .auth_wrapper{
+    height: 100%;
+    padding: 1rem;
+  }
+
+  .logo h1{
+    font-size: 2rem;
+  }
+  .logo_img{
+    max-width: 3.25rem;
+  }
+  .user_input label{
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .width_container{
+    max-width: 25rem;
+  }
 }
