@@ -16,53 +16,70 @@
     <meta name="twitter:image" content="https://pandamarket-jieun.netlify.app/image/meta_padamarket.png" />
     <!-- 링크 -->
     <title>판다마켓</title>
-    <link rel="stylesheet" href="css/import.css" />
-    <link rel="stylesheet" href="css/auth.css" />
-    <link rel="icon" href="image/logo.png" />
+    <link rel="stylesheet" href="/css/import.css" />
+    <link rel="stylesheet" href="/css/auth.css" />
+    <link rel="icon" href="/image/logo.png" />
   </head>
   <body>
     <section class="auth_container">
-      <div class="auth_wrapper">
-        <div class="width_container">
-          <a href="/" class="logo">
-            <img src="image/logo.png" alt="판다로고" class="logo_img" />
-            <h1>판다마켓</h1>
-          </a>
-          <form action="/signup">
-            <div class="user_input">
-              <div class="email_input">
-                <label for="user_email">이메일</label>
-                <input class="text_tall" id="user_email" type="email" placeholder="이메일을 입력해주세요"/>
+      <div class="width_container">
+        <a href="/" class="logo">
+          <img src="/image/logo.png" alt="판다로고" class="logo_img" />
+          <h1>판다마켓</h1>
+        </a>
+        <form action="/signup" id="signupForm">
+          <div class="user_input">
+            <!-- 이메일 -->
+            <div class="input_group" data-type="email">
+              <label for="user_email">이메일</label>
+              <div class="input_warp">
+                <input class="text_tall input_text" id="user_email" type="email" placeholder="이메일을 입력해주세요" required/>
+                <span class="error_text"></span>
               </div>
-              <div class="password_input">
-                <label for="user_password">비밀번호</label>
-                <div class="password_view">
-                  <input class="text_tall" id="user_password" type="password" placeholder="비밀번호를 입력해주세요"/>
-              </div>
-              <div class="password_input check">
-                <label for="user_password_check">비밀번호 확인</label>
-                <div class="password_view">
-                  <input class="text_tall" id="user_password_check" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요"/>
-                  <span class="material-symbols-outlined password_icon">visibility_off</span>
-                </div>
-              </div>
-              <button type="submit" class="auth btn text_tall" disabled>로그인</button>
             </div>
-          </form>
-          <div class="simple_login">
-            <span>간편 로그인하기</span>
-            <div class="sns_login_wrapper">
-              <ul class="sns_login">
-                <li class="icon_cover"><a href="https://www.google.com/" class="google_login"><img src="image/sns_google.png" alt="구글아이콘"></a></li>
-                <li class="icon_cover"><a href="https://www.kakaocorp.com/page/" id="kakao_login"><img src="image/sns_kakao.png" alt="카카오아이콘"></a></li>
-              </ul>
+            <!-- 닉네임 -->
+            <div class="input_group" data-type="nick">  
+              <label for="user_nick">닉네임</label>
+              <div class="input_warp">
+                <input class="text_tall input_text" id="user_nick" type="text" placeholder="닉네임을 입력해주세요" required/>
+                <span class="error_text"></span>
+              </div>
             </div>
+            <!-- 비밀번호 -->
+            <div class="input_group" data-type="password">
+              <label for="user_password">비밀번호</label>
+              <div class="input_warp">
+                <input class="text_tall input_text" id="user_password" type="password" placeholder="비밀번호를 입력해주세요" required/>
+                <span class="material-symbols-outlined password_icon">visibility_off</span>
+                <span class="error_text"></span>
+              </div>
+            </div>
+            <!-- 비밀번호 확인 -->
+            <div class="input_group" data-type="password_check">
+              <label for="user_password_check">비밀번호 확인</label>
+              <div class="input_warp">
+                <input class="text_tall input_text" id="user_password_check" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요" required/>
+                <span class="material-symbols-outlined password_icon">visibility_off</span>
+                <span class="error_text"></span>
+              </div>
+            </div>
+            <button type="submit" class="auth btn text_tall" disabled>회원가입</button>
           </div>
-          <div class="auth_helper">
-            <span class="auth_text">이미 회원이신가요?<a href="/login"  class="auth_link">로그인</a></span>
+        </form>
+        <div class="simple_login">
+          <span>간편 로그인하기</span>
+          <div class="sns_login_wrapper">
+            <ul class="sns_login">
+              <li class="icon_cover"><a href="https://www.google.com/" class="google_login"><img src="/image/sns_google.png" alt="구글아이콘"></a></li>
+              <li class="icon_cover"><a href="https://www.kakaocorp.com/page/" id="kakao_login"><img src="/image/sns_kakao.png" alt="카카오아이콘"></a></li>
+            </ul>
           </div>
+        </div>
+        <div class="auth_helper">
+          <span class="auth_text">이미 회원이신가요?<a href="/login"  class="auth_link">로그인</a></span>
         </div>
       </div>
     </section>
+    <script src="/js/auth.js"></script>
   </body>
 </html>

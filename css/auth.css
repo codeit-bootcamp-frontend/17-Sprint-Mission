@@ -4,11 +4,14 @@
 *{
   color: var(--gray-800);
 }
+html, body{
+  height: 100%;
+}
 
-.auth_wrapper{
+.auth_container{
+  min-height: 100%;
+  min-width: 16rem;
   display: flex;
-  height: 100vh;
-  width: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -52,14 +55,20 @@
   padding: 0 1.5rem;
 }
 
+.error_text{
+  position: absolute;
+  bottom: -1rem; left: 0;
+  font-size: 0.875rem;
+  color: #ff0000;
+}
+
 .auth.btn{
   font-size: 1.25rem;
   font-weight: 600;
   background-color: var(--gray-400);
-  cursor: unset;
 }
 
-.password_view{
+.input_warp{
   position: relative;
 }
 .password_icon{
@@ -95,6 +104,7 @@
 }
 
 .simple_login span{
+  word-break: keep-all;
   font-weight: 500;
 }
 .sns_login{
@@ -112,8 +122,7 @@
 
 @media screen and (max-width: 767px) {
   
-  .auth_wrapper{
-    height: 100%;
+  .auth_container{
     padding: 1rem;
   }
 
