@@ -1,14 +1,4 @@
-.email {
-  display: flex;
-  flex-direction: column; 
-}
 
-.pwd-content {
-  position: relative; 
-  width: 100%;
-  margin-top: 16px;
-  margin-bottom: 24px;
-}
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .content {
