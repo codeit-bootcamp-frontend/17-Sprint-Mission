@@ -245,6 +245,8 @@
   }
 
   .bottom-all {
+    max-width: 375px;
+    width: 100%;
     padding-top: 121px;
   }
 
