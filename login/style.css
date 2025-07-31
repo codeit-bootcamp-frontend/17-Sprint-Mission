@@ -39,7 +39,6 @@
   position: relative;
   width: 100%;
   margin-top: 16px;
-  margin-bottom: 24px;
 }
 
 .eye {
@@ -92,6 +91,7 @@ label {
   border-radius: 40px;
   height: 3.5rem;
   font-size: var(--font-size-20);
+  margin-top: var(--font-size-24);
 }
 
 .section {
