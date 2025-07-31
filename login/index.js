@@ -7,21 +7,7 @@ const passwordError = document.getElementById("password-error");
 const loginBtn = document.querySelector(".login-btn");
 const loginForm = document.getElementById("LoginForm");
 
-function updateLoginBtnState() {
-  const emailHasError = emailError.style.display === "block";
-  const passwordHasError = passwordError.style.display === "block";
-
-  const emailEmpty = !emailInput.value;
-  const passwordEmpty = !passwordInput.value;
-
-  if (emailHasError || passwordHasError || emailEmpty || passwordEmpty) {
-    loginBtn.disabled = true;
-  } else {
-    loginBtn.disabled = false;
-  }
-}
-
-emailInput.addEventListener("blur", () => {
+function validateEmail() {
   const value = emailInput.value;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -41,11 +27,9 @@ emailInput.addEventListener("blur", () => {
     emailInput.classList.remove("input-error");
     emailError.style.display = "none";
   }
+}
 
-  updateLoginBtnState();
-});
-
-passwordInput.addEventListener("blur", () => {
+function validatePassword() {
   const value = passwordInput.value;
   let message = "";
 
@@ -63,7 +47,39 @@ passwordInput.addEventListener("blur", () => {
     passwordInput.classList.remove("input-error");
     passwordError.style.display = "none";
   }
+}
 
+function updateLoginBtnState() {
+  const emailHasError = emailError.style.display === "block";
+  const passwordHasError = passwordError.style.display === "block";
+
+  const emailEmpty = !emailInput.value;
+  const passwordEmpty = !passwordInput.value;
+
+  if (emailHasError || passwordHasError || emailEmpty || passwordEmpty) {
+    loginBtn.disabled = true;
+  } else {
+    loginBtn.disabled = false;
+  }
+}
+
+emailInput.addEventListener("blur", () => {
+  validateEmail();
+  updateLoginBtnState();
+});
+
+passwordInput.addEventListener("blur", () => {
+  validatePassword();
+  updateLoginBtnState();
+});
+
+emailInput.addEventListener("input", () => {
+  validateEmail();
+  updateLoginBtnState();
+});
+
+passwordInput.addEventListener("input", () => {
+  validatePassword();
   updateLoginBtnState();
 });
 
@@ -73,3 +89,5 @@ loginForm.addEventListener("submit", (e) => {
     window.location.href = "/items";
   }
 });
+
+updateLoginBtnState(); // 초기 상태 업데이트
