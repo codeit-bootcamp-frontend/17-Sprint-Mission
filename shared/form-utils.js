@@ -40,6 +40,25 @@ export function validatePasswordInput(inputEl, errorEl) {
   return !message;
 }
 
+export function validateConfirmPasswordInput(
+  passwordInput,
+  confirmPasswordInput,
+  errorEl
+) {
+  const passwordValue = passwordInput.value;
+  const confirmPasswordValue = confirmPasswordInput.value;
+
+  let message = "";
+
+  if (!confirmPasswordValue) {
+    message = "";
+  } else if (confirmPasswordValue !== passwordValue) {
+    message = "비밀번호가 일치하지 않습니다.";
+  }
+  showValidation(confirmPasswordInput, errorEl, message);
+  return !message;
+}
+
 export function preventPasswordSpaces(passwordInput) {
   if (!passwordInput) return;
 

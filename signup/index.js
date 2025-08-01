@@ -4,6 +4,7 @@ import {
   preventPasswordSpaces,
   updateButtonState,
   validateNicknameInput,
+  validateConfirmPasswordInput,
 } from "../shared/form-utils.js";
 
 const emailInput = document.getElementById("email");
@@ -25,12 +26,20 @@ function validateEmail() {
   return validateEmailInput(emailInput, emailError);
 }
 
+function validateNickname() {
+  return validateNicknameInput(nicknameInput, nicknameError);
+}
+
 function validatePassword() {
   return validatePasswordInput(passwordInput, passwordError);
 }
 
-function validateNickname() {
-  return validateNicknameInput(nicknameInput, nicknameError);
+function validateConfirmPassword() {
+  return validateConfirmPasswordInput(
+    passwordInput,
+    confirmPasswordInput,
+    confirmPasswordError
+  );
 }
 
 function updateSignupBtnState() {
@@ -46,13 +55,18 @@ emailInput.addEventListener("blur", () => {
   updateSignupBtnState();
 });
 
+nicknameInput.addEventListener("blur", () => {
+  validateNickname();
+  updateSignupBtnState();
+});
+
 passwordInput.addEventListener("blur", () => {
   validatePassword();
   updateSignupBtnState();
 });
 
-nicknameInput.addEventListener("blur", () => {
-  validateNickname();
+confirmPasswordInput.addEventListener("blur", () => {
+  validateConfirmPassword();
   updateSignupBtnState();
 });
 
@@ -61,13 +75,18 @@ emailInput.addEventListener("input", () => {
   updateSignupBtnState();
 });
 
+nicknameInput.addEventListener("input", () => {
+  validateNickname();
+  updateSignupBtnState();
+});
+
 passwordInput.addEventListener("input", () => {
   validatePassword();
   updateSignupBtnState();
 });
 
-nicknameInput.addEventListener("input", () => {
-  validateNickname();
+confirmPasswordInput.addEventListener("input", () => {
+  validateConfirmPassword();
   updateSignupBtnState();
 });
 

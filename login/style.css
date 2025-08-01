@@ -41,16 +41,6 @@
   margin-top: 16px;
 }
 
-.eye {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
 label {
   margin: 0;
   font-size: var(--font-size-18);

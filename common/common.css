@@ -73,6 +73,16 @@ footer {
   min-height: 48px;
 }
 
+.eye {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
 .title:hover,
 .logo:hover {
   cursor: pointer;
