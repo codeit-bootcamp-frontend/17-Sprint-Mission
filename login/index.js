@@ -1,4 +1,5 @@
 import {
+  preventPasswordSpaces,
   updateButtonState,
   validateEmailInput,
   validatePasswordInput,
@@ -56,4 +57,5 @@ loginForm.addEventListener("submit", (e) => {
   }
 });
 
+preventPasswordSpaces(passwordInput);
 updateLoginBtnState(); // 초기 상태 업데이트

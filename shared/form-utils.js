@@ -28,6 +28,20 @@ export function validatePasswordInput(inputEl, errorEl) {
   return !message;
 }
 
+export function preventPasswordSpaces(passwordInput) {
+  if (!passwordInput) return;
+
+  passwordInput.addEventListener("keydown", (e) => {
+    if (e.key === " " || e.code === "Space") {
+      e.preventDefault();
+    }
+  });
+
+  passwordInput.addEventListener("input", () => {
+    passwordInput.value = passwordInput.value.replace(/\s/g, "");
+  });
+}
+
 export function showValidation(inputEl, errorEl, message) {
   if (message) {
     inputEl.classList.add("input-error");
