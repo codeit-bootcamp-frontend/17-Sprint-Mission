@@ -40,7 +40,8 @@ footer {
   padding: 32px 0 108px;
 }
 
-.login-btn {
+.login-btn,
+.signup-btn {
   display: inline-flex;
   padding: 12px 23px;
   background-color: var(--blue);
@@ -78,18 +79,21 @@ footer {
 }
 
 .login-btn:hover,
-.header-btn:hover {
+.header-btn:hover,
+.signup-btn:hover {
   cursor: pointer;
   background-color: #1967d6;
 }
 
 .login-btn:focus,
-.header-btn:focus {
+.header-btn:focus,
+.signup-btn:focus {
   background-color: #1251aa;
 }
 
 .login-btn:disabled,
-.header-btn:disabled {
+.header-btn:disabled,
+.signup-btn:disabled {
   background-color: var(--gray400);
   color: var(--white);
   cursor: not-allowed;

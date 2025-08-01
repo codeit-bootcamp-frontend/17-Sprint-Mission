@@ -14,6 +14,18 @@ export function validateEmailInput(inputEl, errorEl) {
   return !message;
 }
 
+export function validateNicknameInput(inputEl, errorEl) {
+  const value = inputEl.value;
+
+  let message = "";
+  if (!value) {
+    message = "닉네임을 입력해주세요.";
+  }
+
+  showValidation(inputEl, errorEl, message);
+  return !message;
+}
+
 export function validatePasswordInput(inputEl, errorEl) {
   const value = inputEl.value;
   let message = "";
