@@ -3,6 +3,7 @@ import {
   updateButtonState,
   validateEmailInput,
   validatePasswordInput,
+  togglePasswordVisiblity,
 } from "../shared/form-utils.js";
 
 const emailInput = document.getElementById("email");
@@ -13,6 +14,7 @@ const passwordError = document.getElementById("password-error");
 
 const loginBtn = document.querySelector(".login-btn");
 const loginForm = document.getElementById("LoginForm");
+const eyeIcon = document.getElementById("eyeIcon");
 
 function validateEmail() {
   return validateEmailInput(emailInput, emailError);
@@ -20,6 +22,10 @@ function validateEmail() {
 
 function validatePassword() {
   return validatePasswordInput(passwordInput, passwordError);
+}
+
+function eyeIconClickHandler() {
+  togglePasswordVisiblity(passwordInput, eyeIcon);
 }
 
 function updateLoginBtnState() {
@@ -48,6 +54,10 @@ emailInput.addEventListener("input", () => {
 passwordInput.addEventListener("input", () => {
   validatePassword();
   updateLoginBtnState();
+});
+
+eyeIcon.addEventListener("click", () => {
+  eyeIconClickHandler();
 });
 
 loginForm.addEventListener("submit", (e) => {

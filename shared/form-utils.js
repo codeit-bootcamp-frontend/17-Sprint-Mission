@@ -59,6 +59,16 @@ export function validateConfirmPasswordInput(
   return !message;
 }
 
+export function togglePasswordVisiblity(passwordInput, eyeIcon) {
+  if (!passwordInput || !eyeIcon) return;
+
+  const isPasswordVisible = passwordInput.type === "text";
+  passwordInput.type = isPasswordVisible ? "password" : "text";
+  eyeIcon.src = isPasswordVisible
+    ? "/images/btn_visibility_off.png"
+    : "/images/btn_visibility_on.png";
+}
+
 export function preventPasswordSpaces(passwordInput) {
   if (!passwordInput) return;
 

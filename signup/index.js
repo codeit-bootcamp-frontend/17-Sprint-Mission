@@ -5,6 +5,7 @@ import {
   updateButtonState,
   validateNicknameInput,
   validateConfirmPasswordInput,
+  togglePasswordVisiblity,
 } from "../shared/form-utils.js";
 
 const emailInput = document.getElementById("email");
@@ -22,6 +23,9 @@ const confirmPasswordError = document.getElementById("confirmPassword-error");
 const signupBtn = document.querySelector(".signup-btn");
 const signupForm = document.getElementById("signupForm");
 
+const eyePassword = document.getElementById("eye-password");
+const eyeConfirm = document.getElementById("eye-confirm");
+
 function validateEmail() {
   return validateEmailInput(emailInput, emailError);
 }
@@ -32,6 +36,14 @@ function validateNickname() {
 
 function validatePassword() {
   return validatePasswordInput(passwordInput, passwordError);
+}
+
+function eyePasswordHandler() {
+  togglePasswordVisiblity(passwordInput, eyePassword);
+}
+
+function eyeConfirmClickHandler() {
+  togglePasswordVisiblity(confirmPasswordInput, eyeConfirm);
 }
 
 function validateConfirmPassword() {
@@ -88,6 +100,14 @@ passwordInput.addEventListener("input", () => {
 confirmPasswordInput.addEventListener("input", () => {
   validateConfirmPassword();
   updateSignupBtnState();
+});
+
+eyePassword.addEventListener("click", () => {
+  eyePasswordHandler();
+});
+
+eyeConfirm.addEventListener("click", () => {
+  eyeConfirmClickHandler();
 });
 
 signupForm.addEventListener("submit", (e) => {
