@@ -1,183 +1,101 @@
-/* 공통 CSS */
-
-body {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-#wrapper {
-    width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-}
-
-.logo {
-    display: block;
-    width: 396px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-}
-
-.logo img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
 .signup_formbox {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.email_label, .nickname_label, .password_label,.password_re_label {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    font-family: 'Pretendard', sans-serif;
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: #1F2937;
-    margin-bottom: 15px;
+.nickname_label,
+.password_re_label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 15px;
 }
 
-.nickname_label, .password_label, .password_re_label {
-    margin-top: 22px;
+.nickname_label,
+.password_label,
+.password_re_label {
+  margin-top: 22px;
 }
 
-.password_label, .password_re_label {
-    position: relative;
+.password_label,
+.password_re_label {
+  position: relative;
 }
 
-.email_input, .nickname_input, .password_input, .password_re_input {
-    width: 100%;
-    height: 56px;
-    font-family: 'Pretendard', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #1F2937;
-    background-color: #F3F4F6;
-    border: none;
-    border-radius: 12px;
-    padding: 0 25px;
+.nickname_input,
+.password_re_input {
+  width: 100%;
+  height: 56px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1f2937;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 12px;
+  padding: 0 25px;
 }
 
-.password_btn img, .password_re_btn img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    cursor: pointer;
+.password_btn img,
+.password_re_btn img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
 }
 
-.email_error, .nickname_error, .password_error, .password_re_error {
-    font-family: 'Pretendard', sans-serif;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #F74747;
-    padding-left: 20px;
-    margin-top: 15px;
-    display: none;
+.nickname_error,
+.password_re_error {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f74747;
+  padding-left: 20px;
+  margin-top: 15px;
+  display: none;
 }
 
-.eye_wrapper, .eye_wrapper_re {
-    position: relative;
-}
-
-.eye_icon {
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    top: 15.5px;
-    right: 25px;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.eye_icon_img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.eye_wrapper_re {
+  position: relative;
 }
 
 .signup_btn {
-    height: 56px;
-    font-family: 'Pretendard', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #F3F4F6;
-    background-color: #1967D6;
-    border: 0px;
-    border-radius: 40px;
-    margin-top: 22px;
-    cursor: pointer;
+  height: 56px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  background-color: #1967d6;
+  border: 0px;
+  border-radius: 40px;
+  margin-top: 22px;
+  cursor: pointer;
 }
 
 .signup_btn:disabled {
-    background-color: #9CA3AF;
-    cursor: not-allowed;
-    pointer-events: none;
-}
-
-.simple_login {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 74px;
-    padding: 0 23px;
-    margin: 24px 0;
-    font-family: 'Pretendard', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #1F2937;
-    background-color: #E6F2FF;
-    border-radius: 8px;
-}
-
-.login_sns {
-    display: flex;
-    gap: 15px;
-}
-
-.login_google, .login_kakao {
-    width: 42px;
-    height: 42px;
-}
-
-.login_google img, .login_kakao img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .login {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    font-family: 'Pretendard', sans-serif;
-    font-size: 0.875rem;
-    font-weight: 500;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .login p {
-    color: #1F2937;
+  color: #1f2937;
 }
 
 .login a {
-    color: #3692FF;
+  color: #3692ff;
 }
-
-/* 모바일용 CSS */
-
-@media (min-width: 375px) and (max-width: 767px) {
-    #wrapper {
-         max-width: 400px;
-         padding: 0 16px;
-    }
- 
-    .logo {
-         width: 198px;
-     }
- }
-

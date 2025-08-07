@@ -1,49 +1,77 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="utf-8">
-        <title>판다마켓 - 로그인</title>
-        <link rel="icon" href="./image/panda_favicon.png" type="image/png">
-        <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/font.css">
-        <link rel="stylesheet" href="./css/login.css">
-    </head>
-    <body>
-        <div id="wrapper">
-            <a href="/" class="logo">
-                <img src="./image/panda_logo.png" alt="판다마켓 로고">
-            </a>
-            <form class="login_formbox">
-                <label class="email_label" for="email_input">이메일</label>
-                <input class="email_input" name="email" type="email" placeholder="이메일을 입력해주세요">
-                <div class="email_error"></div>
-                <label class="password_label" for="password_input">비밀번호</label>
-                <div class="eye_wrapper">
-                    <input class="password_input" name="password" type="password" placeholder="비밀번호를 입력해주세요">
-                    <button class="eye_icon" type="button" data-target=".password_input" aria-label="비밀번호 보기 토글">
-                        <img class="eye_icon_img" src="./image/password_off.png" alt="비밀번호 보기">
-                    </button>
-                </div>
-                <div class="password_error"></div>
-                <button type="submit" class="login_btn" disabled>로그인</button>
-            </form>
-            <div class="simple_login">
-                <p>간편 로그인하기</p>
-                <div class="login_sns">
-                    <a href="https://www.google.com/" class="login_google" target="_blank">
-                        <img src="./image/google_icon.png" alt="구글 로그인 버튼">
-                    </a>
-                    <a href="https://www.kakaocorp.com/page/" class="login_kakao" target="_blank">
-                        <img src="./image/kakao_icon.png" alt="카카오 로그인 버튼">
-                    </a>
-                </div>
-            </div>
-            <div class="sign_up">
-                <p>판다마켓이 처음이신가요?</p>
-                <a href="/signup.html">회원가입</a>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <title>판다마켓 - 로그인</title>
+    <link rel="icon" href="./image/panda_favicon.png" type="image/png" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/auth.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <a href="/" class="logo">
+        <img src="./image/panda_logo.png" alt="판다마켓 로고" />
+      </a>
+      <form class="login_formbox">
+        <label class="email_label" for="email_input">이메일</label>
+        <input
+          class="email_input"
+          name="email"
+          type="email"
+          placeholder="이메일을 입력해주세요"
+        />
+        <div class="email_error"></div>
+        <label class="password_label" for="password_input">비밀번호</label>
+        <div class="eye_wrapper">
+          <input
+            class="password_input"
+            name="password"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+          />
+          <button
+            class="eye_icon"
+            type="button"
+            data-target=".password_input"
+            aria-label="비밀번호 보기 토글"
+          >
+            <img
+              class="eye_icon_img"
+              src="./image/password_off.png"
+              alt="비밀번호 보기"
+            />
+          </button>
         </div>
-        <script src="./js/eye-icon.js"></script>
-        <script src="./js/input-error.js"></script>
-    </body>
+        <div class="password_error"></div>
+        <button type="submit" class="login_btn" disabled>로그인</button>
+      </form>
+      <div class="simple_login">
+        <p>간편 로그인하기</p>
+        <div class="login_sns">
+          <a
+            href="https://www.google.com/"
+            class="login_google"
+            target="_blank"
+          >
+            <img src="./image/google_icon.png" alt="구글 로그인 버튼" />
+          </a>
+          <a
+            href="https://www.kakaocorp.com/page/"
+            class="login_kakao"
+            target="_blank"
+          >
+            <img src="./image/kakao_icon.png" alt="카카오 로그인 버튼" />
+          </a>
+        </div>
+      </div>
+      <div class="sign_up">
+        <p>판다마켓이 처음이신가요?</p>
+        <a href="/signup.html">회원가입</a>
+      </div>
+    </div>
+    <script src="./js/eye-icon.js"></script>
+    <script src="./js/input-error.js"></script>
+  </body>
 </html>
