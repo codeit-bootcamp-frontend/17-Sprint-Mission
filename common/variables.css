@@ -1,28 +1,27 @@
 :root {
   --gray900: #11827;
-  --gray800: #1F2937;
+  --gray800: #1f2937;
   --gray700: #374151;
-  --gray600: #4B5563;
-  --gray500: #6B7280;
-  --gray400: #9CA3AF;
-  --gray200: #E5E7EB;
-  --gray100: #F3F4F6;
-  --blue :#3692FF; 
-  --white: #FFFFFF;
+  --gray600: #4b5563;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
+  --gray200: #e5e7eb;
+  --gray100: #f3f4f6;
+  --blue: #3692ff;
+  --red: #f74747;
+  --white: #ffffff;
 
-  --font-size-14 : 0.875rem;
-  --font-size-16 : 1rem;
-  --font-size-18 : 1.125rem;
-  --font-size-20 : 1.25rem; 
-  --font-size-24 : 1.5rem;
-  --font-size-32 : 2rem;
-  --font-size-40 : 2.5rem;
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-20: 1.25rem;
+  --font-size-24: 1.5rem;
+  --font-size-32: 2rem;
+  --font-size-40: 2.5rem;
 
   --clamp-24: clamp(1rem, 2.5vw, 1.5rem);
   --clamp-40: clamp(1.8rem, 3.5vw, 2.5rem);
 
-
-
   --nav-title: 25.63px;
-  --login-btn-padding: 11px 43px;  
+  --login-btn-padding: 11px 43px;
 }

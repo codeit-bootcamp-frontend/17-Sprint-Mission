@@ -1,50 +1,76 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="shortcut icon" href="/images/pandaicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="/common/reset.css">
-  <link rel="stylesheet" href="/common/variables.css">
-  <link rel="stylesheet" href="/common/common.css" >
-  <link rel="stylesheet" href="/login/style.css" > 
-</head>
-<body>
-  <div class="content">
-    <div class="title">
-      <img class="logo" src="/images/pandaicon.png" alt="판다마켓로고">
-      <a href="/"><h1>판다마켓</h1></a> 
-    </div>
-    <form>
-      <div class="email">
-        <label for="email">이메일</label>
-        <input class="email-input" name="email" type="email" placeholder="이메일을 입력해 주세요.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="shortcut icon"
+      href="/images/pandaicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/common/reset.css" />
+    <link rel="stylesheet" href="/common/variables.css" />
+    <link rel="stylesheet" href="/common/common.css" />
+    <link rel="stylesheet" href="/login/style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="title">
+        <img class="logo" src="/images/pandaicon.png" alt="판다마켓로고" />
+        <a href="/"><h1>판다마켓</h1></a>
       </div>
-      <div class="pwd">
-        <label for="password">비밀번호</label>
-        <div class="pwd-content">
-          <input class="pwd-input" name="password" type="password" placeholder="비밀번호를 입력해 주세요." >
-          <img class="eye" src="/images/btn_visibility_off.png">
+      <form id="LoginForm">
+        <div class="email">
+          <label for="email">이메일</label>
+          <input
+            id="email"
+            class="email-input"
+            name="email"
+            type="email"
+            placeholder="이메일을 입력해 주세요."
+          />
+          <div id="email-error" class="error-message"></div>
+        </div>
+        <div class="pwd">
+          <label for="password">비밀번호</label>
+          <div class="pwd-content">
+            <input
+              id="password"
+              class="pwd-input"
+              name="password"
+              type="password"
+              placeholder="비밀번호를 입력해 주세요."
+            />
+            <img
+              class="eye"
+              id="eyeIcon"
+              src="/images/btn_visibility_off.png"
+            />
+          </div>
+          <div id="password-error" class="error-message"></div>
+        </div>
+        <button class="login-btn" type="submit" disabled>로그인</button>
+      </form>
+      <div class="section">
+        <div class="simple-login">
+          <h3>간편 로그인 하기</h3>
+        </div>
+        <div class="sns">
+          <a href="https://www.google.com/"
+            ><img src="/images/google.png" alt="google"
+          /></a>
+          <a href="https://www.kakaocorp.com/page/"
+            ><img src="/images/kakao.png" alt="kakao"
+          /></a>
         </div>
       </div>
-      <button class="login-btn" type="submit">로그인</button>
-    </form>
-    <div class="section">
-      <div class="simple-login">
-        <h3>간편 로그인 하기</h3>
-      </div>
-      <div class="sns">
-        <a href="https://www.google.com/"><img src="/images/google.png" alt="google"></a>
-        <a href="https://www.kakaocorp.com/page/"><img src="/images/kakao.png" alt="kakao"></a>
+      <div class="sign-up-message">
+        <div class="message">
+          판다 마켓이 처음이신가요? <a href="/signup/">회원가입</a>
+        </div>
       </div>
     </div>
-    <div class="sign-up-message">
-      <div class="message">
-        판다 마켓이 처음이신가요? <a href="/signup/">회원가입</a>
-      </div>
-    </div>
-
-  </div>
-</body>
+    <script type="module" src="/login/index.js"></script>
+  </body>
 </html>

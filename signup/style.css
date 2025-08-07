@@ -1,26 +1,41 @@
-.email {
-  display: flex;
-  flex-direction: column; 
+.nickname {
+  margin-bottom: var(--font-size-24);
 }
 
-.pwd-content {
-  position: relative; 
+.pwd {
+  margin-bottom: var(--font-size-24);
+}
+
+.input-error {
+  border: 2px solid var(--red);
+}
+
+.error-message {
+  display: none;
+  color: var(--red);
+  font-size: var(--font-size-14);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.signup-btn {
   width: 100%;
-  margin-top: 16px;
-  margin-bottom: 24px;
+  border-radius: 40px;
+  height: 3.5rem;
+  font-size: var(--font-size-20);
+  margin-top: var(--font-size-24);
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .content {
-    margin: 48px auto; 
-    height: auto;  
+    margin: 48px auto;
+    height: auto;
   }
-
 }
 
 @media (max-width: 767px) {
   .content {
-    margin: 24px auto;  
+    margin: 24px auto;
     height: auto;
   }
 }
