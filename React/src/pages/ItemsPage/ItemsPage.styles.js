@@ -2,15 +2,6 @@ import styled from 'styled-components';
 import ProductGrid from '../../components/products/ProductGrid.jsx';
 import { Link } from 'react-router-dom';
 
-export const ItemsPageContainer = styled.div`
-  max-width: 1200px;
-  margin: 24px auto 58px;
-  padding: 0px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-`;
-
 
 export const SectionContainer = styled.div`
   display: flex;

@@ -7,7 +7,6 @@ import Pagination from '../../components/common/Pagination.jsx';
 import { PRODUCTS_PER_PAGE } from '../../utils/constants.js';
 import { Link } from 'react-router-dom';
 import {
-  ItemsPageContainer,
   SectionTitle,
   TopBar,
   SearchInput,
@@ -54,7 +53,7 @@ const ItemsPage = () => {
   ];  
 
   return (
-    <ItemsPageContainer>
+     <>
       <SectionContainer>
       <SectionTitle>베스트 상품</SectionTitle>
       {bestProductsLoading ? <p>로딩 중...</p> : <BestProductGrid products={bestProductsToDisplay} />}
@@ -88,7 +87,7 @@ const ItemsPage = () => {
           currentPage={currentPage}
         />
       )}
-    </ItemsPageContainer>
+      </>
   );
 };
 

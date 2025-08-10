@@ -6,7 +6,7 @@ import AddItemPage from './pages/AddItemPage/AddItemPage.jsx';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme.js';
 import GlobalStyle from './styles/Globalstyle.jsx';
-import Layout from './components/layouts/layout.js';
+import Layout from './components/layouts/Layout.jsx';
 
 
 function App() {

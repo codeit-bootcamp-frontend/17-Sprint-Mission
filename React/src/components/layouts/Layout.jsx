@@ -1,8 +1,9 @@
+import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../common/Navbar';
 
 
-const Container = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <>
     <Navbar/>
