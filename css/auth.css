@@ -1,0 +1,130 @@
+/* login과 signup 페이지의 공통 CSS 분리 */
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  width: 396px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.email_label,
+.password_label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.email_input,
+.password_input {
+  width: 100%;
+  height: 56px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1f2937;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 12px;
+  padding: 0 25px;
+}
+
+.email_error,
+.password_error {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f74747;
+  padding-left: 20px;
+  margin-top: 15px;
+  display: none;
+}
+
+.eye_wrapper {
+  position: relative;
+}
+
+.eye_icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 15.5px;
+  right: 25px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.eye_icon_img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.simple_login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 74px;
+  padding: 0 23px;
+  margin: 24px 0;
+  font-family: "Pretendard", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+}
+
+.login_sns {
+  display: flex;
+  gap: 15px;
+}
+
+.login_google,
+.login_kakao {
+  width: 42px;
+  height: 42px;
+}
+
+.login_google img,
+.login_kakao img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 모바일용 CSS */
+
+@media (min-width: 375px) and (max-width: 767px) {
+  #wrapper {
+    max-width: 400px;
+    padding: 0 16px;
+  }
+
+  .logo {
+    width: 198px;
+  }
+}
