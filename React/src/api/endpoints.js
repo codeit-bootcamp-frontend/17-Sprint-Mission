@@ -10,5 +10,12 @@ export const endpoints = {
 
     toggleFavorite: (productId) =>
       `/products/${productId}/favorite`,
+
+    create: () =>
+      '/products', 
+  },
+    images: {
+    upload: () =>
+      '/images/upload',
   },
 };
