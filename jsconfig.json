@@ -1,0 +1,21 @@
+//https://code.visualstudio.com/docs/languages/jsconfig
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true, //default 없이 import 허용
+    "module": "esnext",
+    "moduleResolution": "node", //모듈 탐색 방식
+    "target": "esnext", //js변환 대상 버전
+    "resolveJsonModule": true, //json import 가능
+    "esModuleInterop": true, // CommonJS와 ESModule 호환 가능
+    "noEmit": true, //실제 js파일 생성하지 않음
+    "checkJs": true // 타입검사
+  },
+  //컴파일 검사
+  "include": ["src", "global.d.ts"],
+  "exclude": ["node_modules", "dist", "build", "coverage"]
+}

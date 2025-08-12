@@ -1,0 +1,146 @@
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+* {
+  color: var(--gray-800);
+}
+html,
+body {
+  height: 100%;
+}
+
+.auth_container {
+  min-height: 100%;
+  min-width: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.width_container {
+  max-width: 40rem;
+  width: 100%;
+}
+
+.user_input label,
+.user_input input,
+.auth.btn {
+  display: block;
+  width: 100%;
+}
+
+.user_input label {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.user_input input,
+.auth.btn {
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.logo h1 {
+  font-size: 4.15rem;
+}
+.logo_img {
+  max-width: 6.5rem;
+}
+
+.user_input input {
+  background-color: var(--gray-100);
+  border-radius: 0.75rem;
+  padding: 0 1.5rem;
+}
+
+.error_text {
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  font-size: 0.875rem;
+  color: #ff0000;
+}
+
+.auth.btn {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: var(--gray-400);
+}
+
+.input_wrap {
+  position: relative;
+}
+.password_icon {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.icon_cover {
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.sns_icon {
+  display: block;
+}
+
+.auth_text a {
+  color: var(--primary-100);
+  border-bottom: 0.06rem solid var(--primary-100);
+}
+
+.simple_login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: #e6f2ff;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-8);
+}
+
+.simple_login span {
+  word-break: keep-all;
+  font-weight: 500;
+}
+.sns_login {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.auth_helper {
+  text-align: center;
+}
+.auth_link {
+  margin-left: 0.3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .auth_container {
+    padding: 1rem;
+  }
+
+  .logo h1 {
+    font-size: 2rem;
+  }
+  .logo_img {
+    max-width: 3.25rem;
+  }
+  .user_input label {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .width_container {
+    max-width: 25rem;
+  }
+}

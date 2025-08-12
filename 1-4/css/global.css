@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Pretendard", sans-serif;
+}
+:root {
+  --primary-100: #3692ff;
+  --primary-200: #1967d6;
+  --primary-300: #1251aa;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --error-red: #f74747;
+}
+
+.width_container {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+a,
+.btn {
+  color: var(--gray-100);
+}
+.text_tall {
+  line-height: 3.5rem;
+}
+.btn.text_tall {
+  border-radius: 2.5rem;
+}
+.btn {
+  background-color: var(--primary-100);
+}
+a.btn:hover {
+  background-color: var(--primary-200);
+}
+img {
+  width: 100%;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 0.3rem 1.875rem rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0;
+}
+
+header .logo_img {
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+  width: 100%;
+}
+a.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+h1 {
+  color: var(--primary-100);
+  white-space: nowrap;
+}
+header h1 {
+  font-size: 2rem;
+}
+
+header a.login {
+  display: block;
+  max-width: 8rem;
+  font-size: 1rem;
+  text-align: center;
+  flex-basis: 8rem;
+  padding: 0.7rem 2.1rem;
+  border-radius: var(--border-8);
+}
+
+footer {
+  background-color: var(--gray-900);
+}
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0 3.5rem;
+  font-size: 1rem;
+}
+
+footer .faq,
+footer .sns_wrapper {
+  display: flex;
+  gap: 0.625rem;
+}
+
+@media screen and (max-width: 1920px) {
+  header {
+    padding: 0 12.5rem;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  header {
+    padding: 0 1.5rem;
+  }
+  .footer_container {
+    margin: 0 6.5rem;
+  }
+  footer .company_since {
+    color: var(--gray-100);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    padding: 0 1rem;
+  }
+
+  .footer_container {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .company_since {
+    order: 3;
+    width: 100%;
+    padding-top: 3.75rem;
+  }
+}
