@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import useApi from '../../hooks/useApi.jsx';
 import useResponsiveDisplay from '../../hooks/useResponsiveDisplay.jsx';
 import { endpoints } from '../../api/endpoints.js';
-import ProductGrid from '../../components/products/ProductGrid.jsx';
 import Pagination from '../../components/common/Pagination.jsx';
 import { PRODUCTS_PER_PAGE } from '../../utils/constants.js';
-import { Link } from 'react-router-dom';
 import {
   SectionTitle,
   TopBar,
@@ -14,9 +13,14 @@ import {
   BestProductGrid,
   AllProductGrid,
   SectionContainer,
-  ActionButtons,
+  SearchInputContainer,
+  // ActionButtons,
+  SearchIcon,
+  SortDropdown
 } from './ItemsPage.styles.js';
-import Dropdown from '../../components/common/Dropdown.jsx';
+import searchIcon from '../../icon/ic_search.svg';
+
+
 
 const ItemsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -62,10 +66,12 @@ const ItemsPage = () => {
       <SectionContainer>
       <TopBar>
         <SectionTitle>전체 상품</SectionTitle>
-          <ActionButtons>
-          <SearchInput type="text" placeholder="검색할 상품을 입력해주세요" />
+          <SearchInputContainer>
+          <SearchInput type="text" placeholder="검색할 상품을 입력해주세요"/>
+          <SearchIcon src={searchIcon} alt="Search"/>
+          </SearchInputContainer>
           <AddItemButton to="/additem">상품 등록하기</AddItemButton>
-          <Dropdown
+          <SortDropdown
             options={dropdownOptions}
             defaultOption={dropdownOptions[0]}
             onSelect={(option) => {
@@ -73,7 +79,6 @@ const ItemsPage = () => {
               setCurrentPage(1); // Reset to first page when sorting changes
             }}
           />
-          </ActionButtons>
       </TopBar>
       
       {productsLoading ? <p>페이지 로딩 중...</p> : <AllProductGrid products={productsToDisplay} />}

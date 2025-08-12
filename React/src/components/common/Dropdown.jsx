@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ChevronDownIcon from '../../icon/ic_arrow_down.svg';
+import ic_sort from '../../icon/ic_sort.svg';
 import styled from 'styled-components';
 
-const Dropdown = ({ options, defaultOption, onSelect }) => {
+const Dropdown = ({ className, options, defaultOption, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(defaultOption);
   const dropdownRef = useRef(null);
@@ -37,10 +38,13 @@ const Dropdown = ({ options, defaultOption, onSelect }) => {
 
   return (
     // ref를 연결하여 이 div의 외부 클릭을 감지
-    <DropdownContainer ref={dropdownRef}>
+    <DropdownContainer className={className} ref={dropdownRef}>
       {/* 선택된 값을 보여주는 버튼 */}
       <DropdownButton onClick={() => setIsOpen(!isOpen)}>
-        <span>{selectedOption.label}</span>
+        <SortIcon>
+          <img src={ic_sort} alt="Sort Icon" />
+        </SortIcon> 
+        <DropdownButtonLabel>{selectedOption.label}</DropdownButtonLabel>
         <img className="DropdownArrow" src={ChevronDownIcon}/>
       </DropdownButton>
 
@@ -63,17 +67,35 @@ const Dropdown = ({ options, defaultOption, onSelect }) => {
 
 const DropdownContainer = styled.div`
   position: relative;
-  width: 120px;
+  width: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #1F2937
 `;
+
+
+const SortIcon = styled.span`
+  display: none;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (max-width: 375px) {
+    display: block;
+  }
+`;
+
+const DropdownButtonLabel = styled.span`
+  display: inline-block;
+  `;
 
 const DropdownButton = styled.button`
   width: 100%;
   padding: 8px 12px;
   background-color: white;
   border: 1px solid #E5E7EB;
-  border-radius: 8px;
+  border-radius: 12px;
   text-align: left;
   cursor: pointer;
   display: flex;
@@ -84,13 +106,28 @@ const DropdownButton = styled.button`
   &:hover {
     border-color: #adadad;
   }
+
+  @media (max-width: 375px) {
+    padding: 9px;
+    width: 42px;
+    height: 42px;
+
+    & ${DropdownButtonLabel} {
+      display: none;
+    }
+
+    & .DropdownArrow {
+      display: none;
+    }
+  }
 `;
+
 
 const DropdownMenu = styled.ul`
   position: absolute;
   top: 100%;
-  left: 0;
-  width: 100%;
+  right: 0;
+  min-width: 120px;
   background-color: white;
   border: 1px solid #E5E7EB;
   border-radius: 8px;

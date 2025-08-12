@@ -147,7 +147,6 @@ const SubmitButton = styled.button`
 `;
 
 const StyledForm = styled.form`
-    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 32px;

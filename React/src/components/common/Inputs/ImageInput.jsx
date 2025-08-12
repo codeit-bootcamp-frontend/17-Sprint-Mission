@@ -115,6 +115,11 @@ const UploadBoxLabel = styled.label`
     width: 48px;
     height: 48px;
  }
+
+@media (max-width: 768px) {
+    width: 168px;
+    height: 168px;
+}
 `;
 
 // 미리보기 이미지 컨테이너
@@ -122,6 +127,11 @@ const PreviewImageContainer = styled.div`
   position: relative;
   width: 282px;
   height: 282px;
+
+@media (max-width: 768px) {
+    width: 168px;
+    height: 168px;
+}
 `;
 
 const PreviewImage = styled.img`
