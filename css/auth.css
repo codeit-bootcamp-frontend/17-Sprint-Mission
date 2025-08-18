@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  width: 640px;
+  margin: 231px 0;
+}
+
+.logo {
+  display: block;
+  width: 396px;
+  height: auto;
+  margin: 0 auto 40px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: left; 
+}
+
+.login-form label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0%;
+}
+
+.login-form input {
+  box-sizing: border-box;
+  width: 100%;
+  gap: 10px;
+  border-radius: 12px;
+  background-color: var(--gray-100);
+  box-shadow: none;
+  outline: none;
+  border: none;
+  padding: 16px 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.login-form input::placeholder {
+  color: var(--gray-400);
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 16px 48px 16px 16px; /* Adjust padding for visibility toggle */
+  top: 50%;
+}
+
+.toggle-visibility {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  z-index: 10;
+}
+
+.eye-icon {
+  width: 24px;
+  height: 24px;
+  color: #4B5563;
+}
+
+
+
+.login-button {
+  margin-top: 16px;
+  width: 100%;
+  background-color: var(--gray-400);
+  color: var(--gray-100);
+  padding: 16px 124px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  border: none;
+  box-shadow: none;
+}
+
+.login-button:active {
+  background-color: var(--primary);
+  color: var(--gray-100);
+} 
+
+.social-login {
+  margin-top: 24px;
+  background-color: #E6F2FF;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 23px;
+
+}
+
+.social-login p{
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0%;
+  line-height: 1;
+}
+
+
+.social-login .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-login img {
+  display: block;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+}
+
+.signup {
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: var(--gray-800);
+  text-align: center;
+}
+
+.signup a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  color: var(--primary);
+}
+
+/* 태블릿 반응형*/
+@media (max-width: 1199px) and (min-width: 768px) {
+   .login-container {
+    padding: 190px 52px auto;
+  }
+}
+
+/* 모바일 반응형*/
+@media (max-width: 767px) and (min-width: 375px) {
+   .login-container {
+    width: 100%;
+    padding: 0px 16px;
+    margin: 80px 0px;
+    max-width: 400px;
+    flex: 1;
+  }
+
+  .logo {
+    display: block;
+    width: 198px;
+  }
+
+
+}
+
+

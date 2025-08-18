@@ -1,0 +1,49 @@
+/* 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html, body 초기화 */
+html, body {
+  height: 100%;
+  font-family: sans-serif; 
+  line-height: 1.5;
+}
+
+/* 링크 초기화 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 버튼 초기화 */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* 인풋 초기화 */
+input {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* 리스트 초기화 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 이미지 초기화 */
+img {
+  max-width: 100%;
+  display: block;
+}

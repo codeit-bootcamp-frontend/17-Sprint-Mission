@@ -1,0 +1,417 @@
+/* GNB */
+.gnb {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-bottom: 0.0625rem solid var(--gray-200);
+  z-index: 1000;
+  height: 4.375rem;
+}
+
+.gnb-inner {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 10vw, 12.5rem);
+  height: 4.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 1;
+}
+
+.logo-large {
+  display: block;
+}
+
+.logo-large img {
+  width: auto;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.logo-small {
+  display: none;
+}
+
+.login-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 8rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 히어로 섹션 */
+.hero {
+  background-color: #cee4ff;
+}
+
+.hero-container {
+  max-width: 120rem;
+  padding: 13rem 0 0 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4375rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  ;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  line-height: 140%;
+  font-weight: 700;
+  width: 100%;
+}
+
+.linebreak {
+  display: block;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--gray-50);
+  padding: 1rem 7.75rem;
+  border-radius: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2rem;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hero-img {
+  display: block;
+  flex-shrink: 0;
+  width: 46.625rem;
+  height: 21.25rem;
+  min-width: 448px;
+}
+
+/* 중간 기능 섹션 */
+.features {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  background: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.feature {
+  background: #FCFCFC;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 120rem;
+  padding: 8.625rem 0;
+}
+
+.feature.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-text {
+  flex: 1;
+  width: 18.625rem;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.feature.reverse .feature-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.feature-text .label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.feature-text h2 {
+  font-size: clamp(1.5rem 2rem, 2.5rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.feature-text p {
+  font-size: clamp(1rem, 1.125rem, 1.5rem);
+  color: var(--gray-600);
+}
+
+.feature img {
+  flex: 1;
+  width: 36.1875rem;
+  height: 27.75rem;
+}
+
+/* 신뢰 섹션 */
+.trust {
+  background-color: #cee4ff;
+}
+
+.trust-inner {
+  max-width: 120rem;
+  padding: clamp(0rem, 20vh, 9rem) 0;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  white-space: nowrap;
+  flex-shrink: 1;
+}
+
+.trust-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  width: 18.4375rem;
+  height: 10.75rem;
+}
+
+.trust-text h2 {
+  font-family: Pretendard;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--gray-700);
+  align-items: center;;
+}
+
+.trust-img {
+  width: 46.625rem;
+  height: 21.25rem;
+  flex-shrink: 1;
+  display: block;
+}
+
+.footer {
+  background-color: var(--gray-900);
+  color: var(--gray-400);
+  padding: 2rem clamp(1.25rem, 10vw, 12.5rem);
+  height: 10rem;
+}
+
+.footer-inner {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 10vw, 12.5rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 1;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-links a {
+  color: var(--gray-200);
+  font-size: 0.9rem;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.social a {
+  display: inline-block;
+}
+
+.social img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.social img:hover {
+  opacity: 0.8;
+}
+
+/* 태블릿 */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .gnb-inner {
+    padding: 0 24px;
+  }
+
+  .footer-inner {
+    padding: 2rem 24px;
+    gap: 24px;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin: 84px 116px 211px;
+    white-space: nowrap;
+  }
+
+  .hero-text .linebreak {
+    display: inline;
+    white-space: nowrap;
+  }
+
+  .hero-container {
+    max-width: 120rem;
+    padding: 84px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+ .hero-img {
+    width: 100%;
+    min-width: unset;     
+    flex-shrink: 1;       
+    height: auto;          
+  }
+
+  .feature h2 .linebreak{
+    display: none;
+  }
+
+  .feature img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    flex: none;
+  }
+
+
+  .trust-text {
+    text-align: center;
+    margin: 200px 0
+}
+  .trust-img {
+    width: 100%;
+    min-width: unset;     
+    flex-shrink: 1;       
+    height: auto;          
+  }
+
+}
+
+/* 모바일 */
+@media (max-width: 767px) and (min-width: 375px) {
+  .gnb-inner, .footer-inner {
+    padding: 0 16px;
+  }
+
+  .logo-large {
+    display: none;
+  }
+
+  .logo-small {
+    display: block;
+  }
+
+  .hero-text h1, .trust-text h2 { 
+    text-align: center;
+    margin: 0 auto
+  }
+
+  .hero-img, .trust-img {
+    width: 100%;  
+    flex-shrink: 1;       
+    height: auto;          
+  }
+
+  .btn-primary {
+    padding: 11px 71px;
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    text-align: center;
+
+  }
+
+  .features {
+    gap: 40px;
+    padding: 52px 16px;
+  }
+
+  .feature {
+    padding: 0px;
+  }
+
+  .feature h2 .linebreak{
+    display: none;
+  }
+
+  .feature img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .footer {
+    padding: 32px 32px 30px;
+  }
+  
+  .footer-inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer-links {
+  order: 1;
+  }
+
+  .social {
+    order: 1;
+  }
+
+  .copyright {
+    order: 2;
+    flex-basis: 100%;
+    
+  }
+}

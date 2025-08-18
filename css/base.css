@@ -1,0 +1,26 @@
+/* 기본 리셋 및 공통 스타일 */
+@import './variables.css';
+@import './reset.css';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  line-height: 1.6;
+  background-color: #fbfbfb;
+  color: var(--gray-800);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
