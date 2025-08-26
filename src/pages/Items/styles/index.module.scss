@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-2xl);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  @include tablet {
+    width: 100%;
+  }
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--spacing-2xl) 0;
+    max-width: var(--width-container);
+  }
+}

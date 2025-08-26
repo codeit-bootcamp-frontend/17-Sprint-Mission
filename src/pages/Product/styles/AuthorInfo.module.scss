@@ -1,0 +1,44 @@
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+
+  .profileImg {
+    background-color: var(--color-gray-300);
+    border-radius: var(--radius-circle);
+    &Product {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    &Comment {
+      width: 2rem;
+      height: 2rem;
+    }
+    &Community {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  .authorWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: var(--font-size-sm);
+    gap: var(--spacing-xs);
+    &Comment {
+      font-size: var(--font-size-xs);
+    }
+    &Community {
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+    .nickname {
+      color: var(--color-gray-600);
+      font-weight: 400;
+    }
+    .updateAt {
+      color: var(--color-gray-400);
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  width: 100%;
+  @include tablet {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+  .imgWrapper {
+    min-width: 100%;
+    max-width: 30.375rem;
+    @include tablet {
+      min-width: 50%;
+      max-width: 50%;
+    }
+    @include desktop {
+      min-width: 30.375rem;
+    }
+  }
+  .contentsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: rem(40px);
+    @include tablet {
+      gap: var(--spacing-3xl);
+    }
+  }
+  .texts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    @include desktop {
+      gap: var(--spacing-lg);
+    }
+    .titles {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      padding-bottom: var(--spacing-md);
+      border-bottom: 1px solid var(--color-gray-200);
+      .title {
+        font-size: var(--font-size-md);
+        font-weight: 600;
+        @include tablet {
+          font-size: var(--font-size-xl);
+        }
+        @include desktop {
+          font-size: var(--font-size-2xl);
+        }
+      }
+      .price {
+        font-size: var(--font-size-2xl);
+        font-weight: 600;
+        @include tablet {
+          font-size: var(--font-size-3xl);
+        }
+        @include desktop {
+          font-size: rem(40px);
+        }
+      }
+      svg {
+        position: absolute;
+        right: 1rem;
+        top: 0;
+      }
+    }
+    .infoContainer {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-lg);
+      .infoLabel {
+        font-weight: 600;
+        font-size: var(--font-size-sm);
+        @include desktop {
+          font-size: var(--font-size-md);
+        }
+      }
+      .description {
+        color: var(--color-gray-800);
+        font-weight: 500;
+      }
+      .tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+    }
+  }
+  .sectionFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .likeButtonWrapper {
+      padding-left: 1.5rem;
+      border-left: 1px solid var(--color-gray-200);
+      .likeButton {
+        @include flex-center;
+        gap: var(--spacing-xs);
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gray-200);
+        border-radius: rem(35px);
+        padding: rem(4px) rem(12px);
+        font-weight: 500;
+        transition: border 0.3s ease-in;
+        &:hover {
+          border: 1px solid var(--color-primary);
+          svg {
+            path {
+              stroke: var(--color-primary);
+            }
+          }
+        }
+        &:active {
+          svg {
+            fill: var(--color-primary);
+          }
+        }
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+          path {
+            transition: stroke 0.3s ease-in;
+            stroke: var(--color-gray-500);
+          }
+        }
+        .count {
+          color: var(--color-gray-500);
+        }
+      }
+    }
+  }
+}

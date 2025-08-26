@@ -1,0 +1,40 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--spacing-lg);
+  .emptyComment {
+    @include flex-center;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    img {
+      width: rem(140px);
+      height: rem(140px);
+
+      @include tablet {
+        width: rem(196px);
+        height: rem(196px);
+      }
+    }
+    span {
+      color: var(--color-gray-400);
+      font-weight: 300;
+    }
+  }
+  .commentContainer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: rem(12px);
+    border-bottom: 1px solid var(--color-gray-300);
+    gap: var(--spacing-lg);
+    .commentWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .comment {
+        font-size: var(--font-size-sm);
+        font-weight: 500;
+      }
+    }
+  }
+}

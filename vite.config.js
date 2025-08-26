@@ -18,7 +18,13 @@ export default defineConfig(({mode}) => ({
       include: "**/*.svg",
     }),
   ],
-
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use '@/styles' as *;`,
+      },
+    },
+  },
   esbuild: {
     //build에 console, debugger 제거
     drop: mode === 'production'? ["debugger", "console"] : [],

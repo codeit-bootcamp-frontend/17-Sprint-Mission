@@ -1,0 +1,76 @@
+:root {
+  --color-primary: #3692ff;
+  --color-gray-900: #111827;
+  --color-gray-800: #1f2937;
+  --color-gray-700: #374151;
+  --color-gray-600: #4b5563;
+  --color-gray-500: #6b7280;
+  --color-gray-400: #9ca3af;
+  --color-gray-300: #d1d5db;
+  --color-gray-200: #e5e7eb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-50: #f9fafb;
+  --color-white: #ffffff;
+  --color-error-red: #f74747;
+
+  /* Typography */
+  --font-primary: 'pretendard', sans-serif;
+  --font-secondary: 'ROKAF_Sans_Medium', sans-serif;
+
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1rem; /* 16px, base */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.75rem; /* 28px */
+
+  /* spacing */
+  --spacing-xs: 0.3125rem;
+  --spacing-sm: 0.625rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 8rem;
+  --spacing-header: 4.5rem;
+
+  /* border-radius */
+  --radius-xs: 0.5rem;
+  --radius-sm: 0.75rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 2.5rem;
+  --radius-circle: 9999px;
+
+  --width-container: 75rem;
+}
+body {
+  font-family: 'pretendard', sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+  font-weight: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+li {
+  list-style: none;
+}
+textarea {
+  font-family: 'pretendard', sans-serif;
+  font-size: 1rem;
+}

@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  width: 100%;
+  color: var(--color-gray-800);
+  .title {
+    margin-top: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+  }
+  .price {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+  }
+  .likeWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(4px);
+    svg {
+      width: rem(16px);
+    }
+    .like {
+      font-size: var(--font-size-xs);
+      font-weight: 500;
+      color: var(--color-gray-600);
+    }
+  }
+}

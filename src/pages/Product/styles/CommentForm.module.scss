@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: rem(9px);
+
+  .title {
+    font-size: var(--font-size-md);
+    font-weight: 600;
+  }
+  .commentInput {
+    height: rem(130px);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-lg) var(--spacing-lg);
+    resize: none;
+    &::placeholder {
+      color: var(--color-gray-400);
+      text-wrap: wrap;
+    }
+    @include tablet {
+      height: rem(104px);
+    }
+  }
+  .buttonWrapper {
+    align-self: flex-end;
+    width: rem(74px);
+    height: rem(42px);
+  }
+}

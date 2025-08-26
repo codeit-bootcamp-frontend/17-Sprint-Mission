@@ -1,0 +1,51 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+
+  .fileInputButton {
+    @include flex-center;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    background-color: var(--color-gray-100);
+    border-radius: var(--radius-md);
+    width: rem(168px);
+    height: auto;
+    aspect-ratio: 1;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-gray-50);
+    }
+    @include tablet {
+      width: 100%;
+    }
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+    .label {
+      color: var(--color-gray-400);
+    }
+    .input {
+      display: none;
+    }
+  }
+  .previewWrapper {
+    position: relative;
+    width: 10.5rem;
+
+    @include tablet {
+      width: 100%;
+    }
+    .clearButton {
+      background: none;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+  }
+  .errorMessage {
+    color: var(--color-error-red);
+  }
+}

@@ -1,0 +1,26 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--spacing-md);
+  .label {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+  }
+  .input {
+    height: 2.625rem;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-md) var(--spacing-lg);
+    &::placeholder {
+      color: var(--color-gray-400);
+    }
+  }
+  .tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+}

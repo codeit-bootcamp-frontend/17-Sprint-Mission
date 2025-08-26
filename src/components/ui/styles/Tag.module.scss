@@ -1,0 +1,11 @@
+.wrapper {
+  @include flex-center;
+  gap: 0.5rem;
+  background-color: var(--color-gray-100);
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-weight: 300;
+  border-radius: rem(26px);
+}
+.button {
+  @include flex-center;
+}

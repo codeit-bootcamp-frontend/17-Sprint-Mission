@@ -1,26 +1,25 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 
 import FacebookIcon from '@/assets/icons/ic_facebook.svg';
 import InstagramIcon from '@/assets/icons/ic_instagram.svg';
 import TwitterIcon from '@/assets/icons/ic_twitter.svg';
 import YoutubeIcon from '@/assets/icons/ic_youtube.svg';
-import { device } from '@/styles/media';
+import styles from '@/components/layout/styles/Footer.module.scss';
 
 export default function Footer() {
   return (
-    <StyledFooter>
-      <Container>
-        <Copyright>©codeit - 2024</Copyright>
-        <Info>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <span className={styles.copyright}>©codeit - 2024</span>
+        <div className={styles.info}>
           <Link to='privacy' aria-label='개인정보 관리 정책 화면으로 이동'>
             Privacy Policy
           </Link>
           <Link to='faq' aria-label='FAQ 화면으로 이동'>
             FAQ
           </Link>
-        </Info>
-        <Icons>
+        </div>
+        <div className={styles.icons}>
           <Link
             to='https://www.facebook.com'
             target='_blank'
@@ -53,61 +52,8 @@ export default function Footer() {
           >
             <InstagramIcon aria-label='인스타그램 아이콘' />
           </Link>
-        </Icons>
-      </Container>
-    </StyledFooter>
+        </div>
+      </div>
+    </footer>
   );
 }
-
-const StyledFooter = styled.footer`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  background-color: #111827;
-`;
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: ${({ theme }) => theme.spacing.xl};
-  font-size: ${({ theme }) => theme.fontSize.sm};
-  font-weight: 400;
-  @media ${device.TABLET} {
-    flex-wrap: nowrap;
-  }
-  @media ${device.DESKTOP} {
-    padding: 2rem 6.5rem 6.75rem;
-  }
-`;
-const Copyright = styled.span`
-  color: ${({ theme }) => theme.colors.gray400};
-  padding-top: 36px;
-  order: 3;
-  width: 100%;
-  @media ${device.TABLET} {
-    padding-top: 0;
-    order: 1;
-    width: auto;
-  }
-`;
-const Info = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.gray200};
-`;
-const Icons = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: ${({ theme }) => theme.spacing.sm};
-  & svg {
-    width: ${({ theme }) => theme.fontSize.md};
-    height: ${({ theme }) => theme.fontSize.md};
-  }
-`;

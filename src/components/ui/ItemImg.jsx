@@ -1,27 +1,17 @@
-import styled from 'styled-components';
+import classNames from 'classnames/bind';
 
 import defaultBox from '@/assets/imgs/default_box.png';
+import styles from '@/components/ui/styles/ItemImg.module.scss';
 
 export default function ItemImg({ imgUrl = '', alt = '' }) {
+  const cn = classNames.bind(styles);
   const onErrorImg = (e) => {
     e.target.src = defaultBox;
   };
   if (imgUrl === '') {
-    return <ImageSkeleton />;
+    return <div className={cn('image', 'imageSkeleton')} />;
   }
-  return <Image src={imgUrl} onError={onErrorImg} alt={alt} />;
+  return (
+    <img className={styles.image} src={imgUrl} onError={onErrorImg} alt={alt} />
+  );
 }
-
-const Image = styled.img`
-  border-radius: ${({ theme }) => theme.borderRadius.md};
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
-`;
-const ImageSkeleton = styled.div`
-  border-radius: ${({ theme }) => theme.borderRadius.md};
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
-  background-color: ${({ theme }) => theme.colors.gray100};
-`;

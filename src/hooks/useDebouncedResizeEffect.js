@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
-const useDebouncedResizeEffect = (callback, delay = 300) => {
+const DEFAULT_DELAY_MS = 300;
+const useDebouncedResizeEffect = (callback, delay = DEFAULT_DELAY_MS) => {
   let timer;
   useEffect(() => {
     const handleResize = () => {

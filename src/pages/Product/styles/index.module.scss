@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-2xl);
+  padding: var(--spacing-md) var(--spacing-md);
+  @include desktop {
+    padding: var(--spacing-2xl) var(--spacing-xl);
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--spacing-2xl) 0;
+    max-width: rem(1200px);
+  }
+  .buttonWrapper {
+    width: rem(240px);
+    a {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      border-radius: var(--radius-lg);
+      gap: var(--spacing-sm);
+    }
+  }
+}

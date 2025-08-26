@@ -1,0 +1,36 @@
+.container {
+  font-weight: 400;
+  font-size: var(--font-size-sm);
+  position: relative;
+  .menuButton {
+    background: none;
+  }
+  .options {
+    @include flex-center;
+    flex-direction: column;
+    position: absolute;
+    top: rem(28px);
+    right: 0px;
+
+    & > button:first-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    & > button:last-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    .option {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-sm);
+      padding: var(--spacing-sm) var(--spacing-lg);
+      width: 8rem;
+      &:hover {
+        background-color: var(--color-primary);
+        border: 1px solid var(--color-primary);
+        color: var(--color-white);
+      }
+    }
+  }
+}
