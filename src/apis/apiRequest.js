@@ -4,17 +4,31 @@ const BASE_URL = "https://panda-market-api.vercel.app";
 
 async function apiRequest(path, options = {}, isJson = true) {
   try {
+    const token = localStorage.getItem("accessToken");
+
+    console.log(localStorage.getItem("accessToken"));
+    const headers = {
+      ...(options.headers || {}),
+    };
+
+    if (token) {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
+
+    // FormData 이미지는 json이 아니다.
+    let body = options.body;
+    if (!(body instanceof FormData)) {
+      headers["Content-Type"] = "application/json";
+    }
+
     const res = await fetch(`${BASE_URL}${path}`, {
       ...options,
-      headers: {
-        "Content-Type": "application/json",
-        ...(options.headers || {}),
-      },
+      headers,
     });
 
     if (!res.ok) {
-      const errorText = await res.text();
-      throw new Error(`[${res.status}] ${errorText}`);
+      const error_text = await res.text();
+      throw new Error(`[${res.status}] ${error_text}`);
     }
 
     return isJson ? await res.json() : true;

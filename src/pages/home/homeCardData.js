@@ -1,6 +1,6 @@
-import Homecard1 from "@/assets/Img_home_01.png";
-import Homecard2 from "@/assets/Img_home_02.png";
-import Homecard3 from "@/assets/Img_home_03.png";
+import Homecard1 from "@/assets/home_main01.png";
+import Homecard2 from "@/assets/home_main02.png";
+import Homecard3 from "@/assets/home_main03.png";
 
 export const homeCards = [
   {

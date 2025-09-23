@@ -1,4 +1,4 @@
-import { media } from "@/styles/commomStyle";
+import { media } from "@/styles/commonStyle";
 import styled from "styled-components";
 
 export const FooterStyle = styled.footer`

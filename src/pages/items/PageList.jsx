@@ -1,6 +1,6 @@
-import LArrow from "@/assets/left_arrow.png";
-import RArrow from "@/assets/right_arrow.png";
-import { flexCenter } from "@/styles/commomStyle";
+import LArrow from "@/assets/ic_arrow_left_active.svg";
+import RArrow from "@/assets/ic_arrow_right_active.svg";
+import { flexCenter } from "@/styles/commonStyle";
 import { pxToRem } from "@/utils/pxToRem";
 import styled from "styled-components";
 
@@ -34,7 +34,7 @@ export default function PageList({ totalCount, page, setPage, getAllList }) {
             onClick={goPrevGroup}
             disabled={!prevGroup}
           >
-            <img className="page_arrow_img" src={LArrow} alt="pagelist left" />
+            <LArrow className="page_arrow_img" />
           </button>
         </li>
         {Array.from({ length: groupEnd - groupStart + 1 }, (_, i) => {
@@ -56,7 +56,7 @@ export default function PageList({ totalCount, page, setPage, getAllList }) {
             onClick={goNextGroup}
             disabled={!nextGroup}
           >
-            <img className="page_arrow_img" src={RArrow} alt="pagelist right" />
+            <RArrow className="page_arrow_img" />
           </button>
         </li>
       </ol>
@@ -71,7 +71,12 @@ const PageListStyle = styled.div`
   }
 
   .page_btn {
+    ${flexCenter}
     border: 1px solid var(--gray-200);
+  }
+
+  .page_arrow_img > path {
+    transform: translate(${pxToRem(0.6)}, ${pxToRem(0.6)});
   }
 
   .page_list,
@@ -90,10 +95,5 @@ const PageListStyle = styled.div`
   }
   .page_list:hover .page_btn.arrow {
     background-color: transparent;
-  }
-
-  .page_arrow_img {
-    width: ${pxToRem(7)};
-    height: ${pxToRem(12)};
   }
 `;

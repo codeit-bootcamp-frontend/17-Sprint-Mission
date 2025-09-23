@@ -1,11 +1,11 @@
 import styled from "styled-components";
-
+import ArrowIcon from "@/assets/ic_arrow_down.svg";
+import SortIcon from "@/assets/ic_sort.svg";
 import { pxToRem } from "@/utils/pxToRem";
-import arrowIcon from "@/assets/arrow_icon.png";
-import { flexCenter, textStyles } from "@/styles/commomStyle";
+import { flexCenter, media, textStyles } from "@/styles/commonStyle";
 import { useState } from "react";
 
-export default function ItemsOrder({ orderBy, setOrderBy }) {
+export default function ItemsOrder({ orderBy, setOrderBy, device }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSelect = (value) => {
@@ -17,8 +17,14 @@ export default function ItemsOrder({ orderBy, setOrderBy }) {
     <Div>
       <div className={`listBox ${isOpen ? "open" : ""}`}>
         <div className="listLabel" onClick={() => setIsOpen((prev) => !prev)}>
-          <span>{orderBy === "recent" ? "최신순" : "인기순"}</span>
-          <img className="arrow_icon" src={arrowIcon} alt="arrowIcon" />
+          {device === "mobile" ? (
+            <SortIcon />
+          ) : (
+            <>
+              <span>{orderBy === "recent" ? "최신순" : "인기순"}</span>
+              <ArrowIcon className="arrow_icon" />
+            </>
+          )}
         </div>
         {isOpen && (
           <div className="listOptions">
@@ -57,6 +63,10 @@ const Div = styled.div`
   .listLabel {
     line-height: ${pxToRem(42)};
     gap: ${pxToRem(28)};
+    ${media.mobile} {
+      width: ${pxToRem(42)};
+      height: ${pxToRem(42)};
+    }
   }
 
   .arrow_icon {
@@ -73,6 +83,9 @@ const Div = styled.div`
     display: block;
     text-align: center;
     background-color: #fff;
+    ${media.mobile} {
+      right: 0;
+    }
   }
 
   .listOption:hover {

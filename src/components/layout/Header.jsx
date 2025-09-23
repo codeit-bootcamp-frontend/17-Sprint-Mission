@@ -1,13 +1,17 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 import pandaLogo from "@/assets/logo.png";
-import userIcon from "@/assets/user_icon.png";
+import UserIcon from "@/assets/ic_user.svg";
 import { HeaderStyle } from "@/components/layout/Header.style";
+import { WidthContainer } from "@/styles/commonStyle";
 
 function Header() {
+  const { pathname } = useLocation();
+
+  const itemsActive = pathname.startsWith("/items") || pathname === "/additem";
   return (
     <HeaderStyle>
-      <div className="width_container">
+      <WidthContainer>
         <div className="header_left">
           <Link to="/" className="logo">
             <img src={pandaLogo} alt="판다로고" className="logo_img" />
@@ -26,7 +30,9 @@ function Header() {
               <li>
                 <NavLink
                   to="/items"
-                  className={({ isActive }) => (isActive ? "active" : "")}
+                  className={({ isActive }) =>
+                    isActive || itemsActive ? "active" : ""
+                  }
                 >
                   중고마켓
                 </NavLink>
@@ -34,8 +40,8 @@ function Header() {
             </ol>
           </nav>
         </div>
-        <img src={userIcon} alt="사용자 이미지" className="user_img" />
-      </div>
+        <UserIcon className="user_img" />
+      </WidthContainer>
     </HeaderStyle>
   );
 }

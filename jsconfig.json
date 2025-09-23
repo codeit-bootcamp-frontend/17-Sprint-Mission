@@ -5,6 +5,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    "types": ["vite-plugin-svgr/client"],
     "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true, //default 없이 import 허용
     "module": "esnext",
@@ -16,6 +17,6 @@
     "checkJs": true // 타입검사
   },
   //컴파일 검사
-  "include": ["src", "global.d.ts"],
+  "include": ["src", "global.d.ts", "vite-env.d.ts"],
   "exclude": ["node_modules", "dist", "build", "coverage"]
 }

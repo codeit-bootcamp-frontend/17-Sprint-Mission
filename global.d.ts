@@ -1,4 +1,2 @@
-declare module "*.png" {
-  const value: string;
-  export default value;
-}
+//경로 설정
+declare module "*.png";

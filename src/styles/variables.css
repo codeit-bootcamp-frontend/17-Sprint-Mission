@@ -1,0 +1,21 @@
+:root {
+  /* 색상 */
+  --primary-100: #3692ff;
+  --primary-200: #1967d6;
+  --primary-300: #1251aa;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --error-red: #f74747;
+
+  /* border-radius */
+  --border-8: 0.5rem;
+  --border-10: 0.625rem;
+  --border-16: 1rem;
+}

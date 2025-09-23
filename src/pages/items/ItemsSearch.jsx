@@ -1,8 +1,10 @@
-import { flexCenter, textStyles } from "@/styles/commomStyle";
+import { flexCenter, fullSize, textStyles } from "@/styles/commonStyle";
 import { pxToRem } from "@/utils/pxToRem";
 import { useState } from "react";
 // import { toast } from "react-toastify";
 import styled from "styled-components";
+
+import SearchIcon from "@/assets/ic_search_gray.svg";
 
 export default function ItemsSearch({ setSearchInput }) {
   const [inputValue, setInputValue] = useState("");
@@ -20,6 +22,7 @@ export default function ItemsSearch({ setSearchInput }) {
   };
 
   const handleClick = () => {
+    // 빈칸 입력시 경고 토스트
     // if (inputValue.trim() === "") {
     //   toast.warning("검색어를 입력해주세요", {
     //     toastId: "empty-search",
@@ -43,13 +46,27 @@ export default function ItemsSearch({ setSearchInput }) {
 
   return (
     <Div>
-      <input className="search_input"
-        type="text"
-        placeholder="검색할 상품을 입력해주세요."
-        onChange={handleChange}
-        onKeyDown={handleKeyDown}
-      />
-      <button className="search_btn" onClick={handleClick}>검색</button>
+      <div className="search_wrapper">
+        <label htmlFor="search">
+          <SearchIcon
+            className="search_icon"
+            width={pxToRem(15)}
+            height={pxToRem(15)}
+          />
+        </label>
+        <input
+          id="search"
+          className="search_input"
+          type="text"
+          placeholder="검색할 상품을 입력해주세요."
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
+        />
+      </div>
+
+      <button className="search_btn" onClick={handleClick}>
+        검색
+      </button>
     </Div>
   );
 }
@@ -60,17 +77,37 @@ const Div = styled.div`
     height: ${pxToRem(42)};
     padding: 0 ${pxToRem(13)};
   }
-  
-  .search_input{
+
+  .search_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .search_input {
+    ${fullSize}
+    padding-left: ${pxToRem(40)};
     background-color: var(--gray-100);
     border-radius: var(--border-10) 0 0 var(--border-10);
   }
 
-  .search_btn{
-  ${textStyles["text-lg-medium"]}
+  .search_input:focus {
+    outline: none;
+  }
+
+  .search_icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .search_btn {
+    ${textStyles["text-lg-medium"]}
     background-color: var(--primary-100);
     color: #fff;
     border-radius: 0 var(--border-10) var(--border-10) 0;
   }
-
 `;

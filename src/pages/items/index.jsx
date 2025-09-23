@@ -7,14 +7,15 @@ import { handleFetch } from "@/utils/handleFetch";
 import ItemList from "@/pages/items/ItemList";
 import ItemsSearch from "@/pages/items/ItemsSearch";
 import ItemsOrder from "@/pages/items/ItemsOrder";
-import { ItemsStyle } from "@/pages/items/Items.style";
+import { ItemsStyle } from "@/pages/items/index.style";
 import PageList from "@/pages/items/PageList";
+import { breakpoints, media } from "@/styles/commonStyle";
 
 //반응형
 const getDeviceType = () => {
   const width = window.innerWidth;
-  if (width >= 1200) return "pc";
-  if (width >= 768) return "tablet";
+  if (width >= breakpoints.pc) return "pc";
+  if (width >= breakpoints.tablet) return "tablet";
   return "mobile";
 };
 
@@ -82,12 +83,6 @@ function ItemsPage() {
       "best"
     );
 
-  //맨 처음 렌더링했을 때
-  useEffect(() => {
-    fetchProducts();
-    fetchBestProducts();
-  }, []);
-
   // 페이지이동, 검색, 정렬변경, 화면 크기 변경했을 때 렌더링
   useEffect(() => {
     fetchProducts();
@@ -105,7 +100,7 @@ function ItemsPage() {
         </>
       ) : (
         <>
-          <h3>베스트 상품</h3>
+          <h2 className="itmes_title">베스트 상품</h2>
           <ul className="best_items">
             {bestProducts.map((item) => (
               <li key={item.id} className="best_item">
@@ -116,13 +111,17 @@ function ItemsPage() {
 
           <div className="item_all_list">
             <div className="item_nav">
-              <h3>전체 상품</h3>
+              <h2 className="itmes_title">전체 상품</h2>
               <div className="item_order">
                 <ItemsSearch setSearchInput={setSearchInput} />
-                <Link to="/AddItem">
-                  <button className="add_btn">상품등록하기</button>
-                </Link>
-                <ItemsOrder orderBy={orderBy} setOrderBy={setOrderBy} />
+                <button className="add_btn">
+                  <Link to="/additem">상품등록하기</Link>
+                </button>
+                <ItemsOrder
+                  orderBy={orderBy}
+                  setOrderBy={setOrderBy}
+                  device={device}
+                />
               </div>
             </div>
             <ul className="all_items">

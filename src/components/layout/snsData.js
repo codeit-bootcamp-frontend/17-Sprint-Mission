@@ -1,27 +1,27 @@
-import imgSNS01 from "@/assets/sns01.png";
-import imgSNS02 from "@/assets/sns02.png";
-import imgSNS03 from "@/assets/sns03.png";
-import imgSNS04 from "@/assets/sns04.png";
+import imgSNS01 from "@/assets/ic_sns01.svg";
+import imgSNS02 from "@/assets/ic_sns02.svg";
+import imgSNS03 from "@/assets/ic_sns03.svg";
+import imgSNS04 from "@/assets/ic_sns04.svg";
 
 export const snsImages = [
   {
     href: "https://www.facebook.com/",
-    img: imgSNS01,
+    svg: imgSNS01,
     alt: "facebook",
   },
   {
     href: "https://x.com/",
-    img: imgSNS02,
+    svg: imgSNS02,
     alt: "X",
   },
   {
     href: "https://www.youtube.com/",
-    img: imgSNS03,
+    svg: imgSNS03,
     alt: "youtube",
   },
   {
     href: "https://www.instagram.com/",
-    img: imgSNS04,
+    svg: imgSNS04,
     alt: "instagram",
   },
 ];

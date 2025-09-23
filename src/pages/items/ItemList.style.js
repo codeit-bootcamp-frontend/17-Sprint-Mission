@@ -1,4 +1,4 @@
-import { textStyles } from "@/styles/commomStyle";
+import { textStyles } from "@/styles/commonStyle";
 import { pxToRem } from "@/utils/pxToRem";
 import styled from "styled-components";
 

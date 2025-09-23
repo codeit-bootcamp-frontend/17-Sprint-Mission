@@ -1,30 +1,43 @@
-import { ItemListStyle } from "@/pages/items/ItemList.style";
-import noImage from "@/assets/NoImage.png";
-import favoriteIcon from "@/assets/favorit_Icon.png";
-import favoriteFillIcon from "@/assets/favorit_fill_Icon.png";
-import { useState } from "react";
-import { patchProduct } from "@/apis/products";
+import { useEffect, useState } from "react";
+import { deleteFavorite, getProductById, postFavorite } from "@/apis/products";
 import { Link } from "react-router-dom";
+
+import { ItemListStyle } from "@/pages/items/ItemList.style";
+import noImage from "@/assets/noImage.png";
+import FavoriteIcon from "@/assets/ic_favorit_Icon.svg";
+import FavoriteFillIcon from "@/assets/ic_favorit_fill_Icon.svg";
 
 export default function ItemList({ id, images, name, price, favoriteCount }) {
   const [isClick, setIsClick] = useState(false);
   const [count, setCount] = useState(favoriteCount);
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    async function fetchDetail() {
+      const product = await getProductById(id);
+      if (product) {
+        setIsClick(product.isFavorite);
+        setCount(product.favoriteCount);
+      }
+    }
+    fetchDetail();
+  }, [id]);
+
   const handleFavoriteClick = async () => {
     if (loading) return;
     setLoading(true);
 
-    setIsClick((prev) => !prev);
-    const newCount = count + (!isClick ? +1 : -1);
+    const nextState = !isClick;
+    setIsClick(nextState);
+    const newCount = count + (nextState ? +1 : -1);
 
     setCount(newCount);
 
     try {
-      await patchProduct(id, { favoriteCount: newCount });
+      nextState ? await postFavorite(id) : await deleteFavorite(id);
     } catch (error) {
       console.error("좋아요 변경 실패:", error);
-      setIsClick(!isClick);
+      setIsClick(isClick);
       setCount(count);
     } finally {
       setLoading(false);
@@ -45,16 +58,16 @@ export default function ItemList({ id, images, name, price, favoriteCount }) {
         />
       </Link>
       <div className="item_info">
-        <h4 className="item_name">
+        <span className="item_name">
           <Link to={`/items/${id}`}>{name}</Link>
-        </h4>
+        </span>
         <span className="item_price">{Number(price).toLocaleString()} 원</span>
         <span className="item_favorit" onClick={handleFavoriteClick}>
-          <img
-            className="favorite_icon"
-            src={!isClick ? favoriteIcon : favoriteFillIcon}
-            alt="favorite"
-          />
+          {isClick ? (
+            <FavoriteFillIcon className="favorite_icon" />
+          ) : (
+            <FavoriteIcon className="favorite_icon" />
+          )}
           {count}
         </span>
       </div>
